@@ -1,6 +1,5 @@
-from flask import Flask
+from form import app
 
-app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
