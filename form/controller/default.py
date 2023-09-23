@@ -1,13 +1,21 @@
 from form import app
-from flask import render_template, redirect, url_for, request, abort
+from flask import render_template, redirect, url_for, request
+
+from form.model.registerforms import RegisterForm
 
 
 @app.route('/', methods=['GET', 'POST'])
 def register():
+    form = RegisterForm()
     if request.method == 'POST':
-        if request.form['name'] == 'test' and request.form['email'] =='test@gmail.com':
-            return redirect(url_for('success'))    
-    return render_template('auth/index.html')
+        if form.validate_on_submit:
+            print(form.name.data)
+            print(form.email.data)
+            print(form.phone_number.data)
+            print(form.age.data)
+            print(form.occupation.data)
+            return redirect(url_for('success'))
+    return render_template('auth/index.html', form=form)
     
 
 

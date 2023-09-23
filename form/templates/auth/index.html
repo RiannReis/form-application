@@ -9,16 +9,21 @@
   </header>
   <form action="" method="post">
     <fieldset>
-      <label class="lbl-text" for="name">Name:</label>
-      <input class="input-detail" type="text" id="name" name="name" required>
-      <label class="lbl-text" for="email">Email:</label>
-      <input class="input-detail" type="email" id="email" name="email" required>
-      <label class="lbl-text" for="phone">Phone Number:</label>
-      <input class="input-detail" type="tel" id="phone" name="phone" required>
-      <label class="lbl-text" for="age">Age:</label>
-      <input class="input-detail" type="number" id="age" name="age" min="0" max="100">
-      <label class="lbl-text" for="occupation">Ocupação:</label>
-      <input class="input-detail" type="text" id="occupation" name="occupation">
+      {{ form.csrf_token }}
+      {{ form.name.label(class="lbl-text") }}
+      {{ form.name(class="input-detail") }}
+
+      {{ form.email.label(class="lbl-text") }}
+      {{ form.email(class="input-detail") }}
+
+      {{ form.phone_number.label(class="lbl-text") }}
+      {{ form.phone_number(class="input-detail") }}
+
+      {{ form.age.label(class="lbl-text") }}
+      {{ form.age(class="input-detail") }}
+
+      {{ form.occupation.label(class="lbl-text") }}
+      {{ form.occupation(class="input-detail") }}
     </fieldset>
     <fieldset>
       <label class="check" for="terms"><input type="checkbox" id="terms" name="terms" required> <b>I have read and
