@@ -2,7 +2,32 @@
 
 {% block content %}
 
-
+<div class="container">
+  <header>
+    <h1>Participation Form</h1>
+    <h2>Fill in your details and agree to the terms, we are happy with your interest!</h2>
+  </header>
+  <form action="" method="post">
+    <fieldset>
+      <label class="lbl-text" for="name">Name:</label>
+      <input class="input-detail" type="text" id="name" name="name" required>
+      <label class="lbl-text" for="email">Email:</label>
+      <input class="input-detail" type="email" id="email" name="email" required>
+      <label class="lbl-text" for="phone">Phone Number:</label>
+      <input class="input-detail" type="tel" id="phone" name="phone" required>
+      <label class="lbl-text" for="age">Age:</label>
+      <input class="input-detail" type="number" id="age" name="age" min="0" max="100">
+      <label class="lbl-text" for="occupation">Ocupação:</label>
+      <input class="input-detail" type="text" id="occupation" name="occupation">
+    </fieldset>
+    <fieldset>
+      <label class="check" for="terms"><input type="checkbox" id="terms" name="terms" required> <b>I have read and
+          agree to the <a href="javascript:void(0)">terms of use</a> and <a href="javascript:void(0)">privacy
+            policy</a>.</b></label>
+    </fieldset>
+    <button type="submit"><b>Send</b></button>
+  </form>
+</div>
 
 
 {% endblock %}
