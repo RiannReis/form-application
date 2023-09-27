@@ -1,8 +1,47 @@
 {% extends 'base.html' %}
 
+{% block title %} Table of Participants{% endblock %}
+
 {% block content %}
 
-
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>Phone Number</th>
+      <th>Occupation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Alice</td>
+      <td>alice@example.com</td>
+      <td>24</td>
+      <td>(51) 9999-9999</td>
+      <td>Engineer</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Bob</td>
+      <td>bob@example.com</td>
+      <td>35</td>
+      <td>(11) 8888-8888</td>
+      <td>Teacher</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Carol</td>
+      <td>carol@example.com</td>
+      <td>28</td>
+      <td>(65) 7777-7777</td>
+      <td>Lawyer</td>
+    </tr>
+  </tbody>
+</table>
 
 
 {% endblock %}

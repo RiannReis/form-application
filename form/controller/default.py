@@ -22,3 +22,13 @@ def register():
 @app.route('/success')
 def success():
     return render_template('results/success.html')
+
+
+@app.route('/login')
+def login():
+    return render_template('auth/login.html')
+
+
+@app.route('/tableDB')
+def data_table():
+    return render_template('storage/table.html')
