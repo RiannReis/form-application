@@ -16,30 +16,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Alice</td>
-      <td>alice@example.com</td>
-      <td>24</td>
-      <td>(51) 9999-9999</td>
-      <td>Engineer</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Bob</td>
-      <td>bob@example.com</td>
-      <td>35</td>
-      <td>(11) 8888-8888</td>
-      <td>Teacher</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Carol</td>
-      <td>carol@example.com</td>
-      <td>28</td>
-      <td>(65) 7777-7777</td>
-      <td>Lawyer</td>
-    </tr>
+    {% for data in participants %}
+      <tr>
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.age}}</td>
+        <td>{{data.number}}</td>
+        <td>{{data.occupation}}</td>
+      </tr>
+    {% endfor %}
   </tbody>
 </table>
 
