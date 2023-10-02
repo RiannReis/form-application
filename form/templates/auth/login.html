@@ -4,9 +4,10 @@
 
 <div class="cont">
     <h1 class="txt">Login</h1>
-    <form class="form-token">
-      <label class="lbl" for="token">Access token below:</label>
-      <input type="text" id="token" name="token" required>
+    <form action="" class="form-token" method="post">
+      {{ form.csrf_token }}
+      {{ form.token.label(class="lbl") }}
+      {{ form.token() }}
       <button class="btn" type="submit">Insert token</button>
     </form>
   </div>
